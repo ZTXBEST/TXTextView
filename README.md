@@ -1,0 +1,2 @@
+# TXTextView
+一个带placeholder的简单textview
