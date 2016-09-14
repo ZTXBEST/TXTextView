@@ -16,7 +16,6 @@
 		27C8D2C81D88D7B1004106E6 /* TXTextViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C8D2C71D88D7B1004106E6 /* TXTextViewTests.m */; };
 		27C8D2D31D88D7B1004106E6 /* TXTextViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C8D2D21D88D7B1004106E6 /* TXTextViewUITests.m */; };
 		27C8D2E21D88D7E9004106E6 /* TXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C8D2E11D88D7E9004106E6 /* TXTextView.m */; };
-		27C8D2E51D88DDC0004106E6 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C8D2E41D88DDC0004106E6 /* Reveal.framework */; };
 		27C8D2E71D88DDFF004106E6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C8D2E61D88DDFF004106E6 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +56,6 @@
 		27C8D2E01D88D7E9004106E6 /* TXTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXTextView.h; sourceTree = "<group>"; };
 		27C8D2E11D88D7E9004106E6 /* TXTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXTextView.m; sourceTree = "<group>"; };
 		27C8D2E31D88DAF3004106E6 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		27C8D2E41D88DDC0004106E6 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		27C8D2E61D88DDFF004106E6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -67,7 +65,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C8D2E71D88DDFF004106E6 /* libz.tbd in Frameworks */,
-				27C8D2E51D88DDC0004106E6 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +119,6 @@
 				27C8D2BE1D88D7B1004106E6 /* Info.plist */,
 				27C8D2E61D88DDFF004106E6 /* libz.tbd */,
 				27C8D2E31D88DAF3004106E6 /* PrefixHeader.pch */,
-				27C8D2E41D88DDC0004106E6 /* Reveal.framework */,
 				27C8D2AD1D88D7B1004106E6 /* Supporting Files */,
 			);
 			path = TXTextView;
@@ -533,6 +529,7 @@
 				27C8D2D91D88D7B1004106E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27C8D2DA1D88D7B1004106E6 /* Build configuration list for PBXNativeTarget "TXTextViewTests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +538,7 @@
 				27C8D2DC1D88D7B1004106E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27C8D2DD1D88D7B1004106E6 /* Build configuration list for PBXNativeTarget "TXTextViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +547,7 @@
 				27C8D2DF1D88D7B1004106E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
