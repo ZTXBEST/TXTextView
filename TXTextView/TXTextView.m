@@ -14,11 +14,20 @@
 
 @implementation TXTextView
 
+- (void)dealloc {
+    [self removeObserver:self forKeyPath:@"text" context:nil];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textChange:) name:UITextViewTextDidChangeNotification object:nil];
+        
+//        [self addObserver:self
+//               forKeyPath:@"text"
+//                  options:NSKeyValueObservingOptionNew
+//                  context:nil];
         
         self.textColor=[UIColor blackColor];
         self.font=[UIFont systemFontOfSize:15.0];
@@ -57,6 +66,18 @@
     _placeholderColor=placeholderColor;
     _placeholderLabel.textColor=placeholderColor;
 }
+
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+//    if (self.placeholder.length<=0) {
+//        return;
+//    }
+//    if (self.text.length<=0) {
+//        self.placeholderLabel.hidden=NO;
+//    }
+//    else{
+//        self.placeholderLabel.hidden=YES;
+//    }
+//}
 
 -(void)textChange:(NSNotification *)sender{
     if (self.placeholder.length<=0) {
