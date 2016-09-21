@@ -8,7 +8,7 @@
 
 #import "TXTextView.h"
 
-@interface TXTextView ()
+@interface TXTextView ()<UITextViewDelegate>
 @property(nonatomic,strong)UILabel *placeholderLabel;
 @end
 
@@ -78,6 +78,21 @@
 //        self.placeholderLabel.hidden=YES;
 //    }
 //}
+
+- (void)setIsSupportANewline:(BOOL)isSupportANewline{
+    _isSupportANewline = isSupportANewline;
+    self.delegate = self;
+}
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    if ([text isEqualToString:@"\n"]){
+        if (textView.isFirstResponder) {
+            [textView resignFirstResponder];
+        }
+        return NO;
+    }
+    return YES;
+}
 
 -(void)textChange:(NSNotification *)sender{
     if (self.placeholder.length<=0) {
